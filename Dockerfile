@@ -1,6 +1,6 @@
 FROM python:3.8
 
-RUN apt-get update && apt-get intall -y \
+RUN apt-get update && apt-get install -y \
     sqlite3 \
     && rm -rf /var/lib/apt/lists/*
 
@@ -9,7 +9,7 @@ WORKDIR /app
 
 
 RUN pip install Flask
-RUN pip intall Flask-HTTPAuth
+RUN pip install Flask-HTTPAuth
 
 COPY . .
 
